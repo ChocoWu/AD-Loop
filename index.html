@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="we introduce the interleaved Analyzing–Drafting problem-solving loop (AD-Loop), a new think paradigm that dynamically alternates between analytic and drafting operations.">
+    <meta name="keywords" content="Analyzing-Drafting Loop, Synergy, Multimodal Understanding, Multimodel Generation, Problem-Solving, Think Paradigm, Textual Thoughts, Visual Thoughts, Iterative Refinement, Comprehension, Outputs">
+    <meta property="og:title" content="✨Synergizing Understanding and Generation with Interleaved Analyzing-Drafting Thinking">
+    <meta property="og:description" content="✈️To achieve real synergy between understanding and generation, we introduce the interleaved Analyzing–Drafting problem-solving loop (AD-Loop), a new think paradigm that dynamically alternates between analytic and drafting operations. By interleaving textual thoughts with visual thoughts, AD-Loop enables models to iteratively refine both comprehension and outputs, fostering genuine synergy. ">
+    <meta property="og:url" content="https://sqwu.top/AD-Loop/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AD-Loop">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="✨Synergizing Understanding and Generation with Interleaved Analyzing-Drafting Thinking">
+    <meta name="twitter:description" content="✈️To achieve real synergy between understanding and generation, we introduce the interleaved Analyzing–Drafting problem-solving loop (AD-Loop), a new think paradigm that dynamically alternates between analytic and drafting operations. By interleaving textual thoughts with visual thoughts, AD-Loop enables models to iteratively refine both comprehension and outputs, fostering genuine synergy. ">
+    <meta name="twitter:image" content="./static/images/icon.png">
+    <meta name="twitter:site" content="@SQWu_Tori">
+    <meta name="twitter:creator" content="@SQWu_Tori">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AD-Loop</title>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="stylesheet" href="./static/css/index-gradio.css">
+    <link rel="stylesheet" href="./static/css/live_theme.css">
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/caveat');
+    </style>
+
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+         .scroll-container {
+            height: 600px; /* 设置可视高度 */
+            overflow-y: auto;
+            /* border: 1px solid #ccc; */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* 让列宽固定 */
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+        }
+        .col1 { width: 300px; }
+        .col2 { width: 200px; }
+        .col3 { width: 200px; }
+        .col4 { width: 200px; }
+        .col5 { width: 700px; }
+    </style> 
+    
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <img class="columns is-centered has-text-centered" src="./static/images/logo.png" alt="Teaser" width="40%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                    <h1 class="title is-2 publication-title">Synergizing Understanding and Generation with Interleaved Analyzing-Drafting Thinking</h1>
+                    
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                            <a href="https://chocowu.github.io/">Shengqiong Wu</a><sup>1</sup></span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://www.libobo.site/">Bobo Li</a><sup>1</sup></span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://summerwxk.github.io/">Xinkai Wang</a><sup>1</sup></span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://lxtgh.github.io/">Xiangtai Li</a><sup>2</sup> </span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://www.microsoft.com/en-us/research/people/lecu/">Lei Cui</a><sup>3</sup> </span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://www.microsoft.com/en-us/research/people/fuwei/">Furu Wei</a><sup>3</sup> </span> &nbsp;
+                        <!-- add new line -->
+                        <br>
+                        <span class="author-block">
+                            <a href="https://yanshuicheng.info/">Shuicheng Yan</a><sup>1</sup> </span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://haofei.vip/">Hao Fei</a><sup>2, &#9993;</sup> </span> &nbsp;
+                        <span class="author-block">
+                            <a href="https://www.chuatatseng.com/">Tat-Seng Chua</a><sup>2</sup></span> &nbsp;
+                    </div>
+                    <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+                        <span class="author-block"><b style="color:#f68946; font-weight:normal">▶ </b><sup>1</sup>ational University of Singapore</span> &nbsp;
+                        <span class="author-block"><b
+                                style="color:#008AD7; font-weight:normal">▶ </b><sup>2</sup>Nanyang Technological University</span> &nbsp;
+                        <span class="author-block"><b
+                                style="color:#00d79e; font-weight:normal">▶ </b><sup>3</sup>Microsoft Research</span> &nbsp;
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block" style="font-size: 15px;"><sup>&#9993;</sup>(Correspondence)</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                                <a href="https://arxiv.org/pdf/2602.21435" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <!-- <span class="link-block">
+                                <a href="https://huggingface.co/papers/2511.20563" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"> <img src="static/images/hf.png"></span>
+                                    <span>Code</span>
+                                </a>
+                            </span> -->
+                            <span class="link-block">
+                                <a href="https://github.com/ChocoWu/AD-Loop"
+                                class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>Coming Soon</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" style="background-color: rgb(245,245,245);">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-2">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p  class="content has-text-justified">
+                        Unified Vision–Language Models (UVLMs) aim to advance multimodal learning by supporting both understanding and generation within a single framework. However, existing approaches largely focus on architectural unification while overlooking the need for explicit interaction between the two capabilities during task solving. As a result, current models treat understanding and generation as parallel skills rather than synergistic processes. To achieve real synergy, we introduce the interleaved Analyzing–Drafting problem-solving loop (<em>AD-Loop</em>), a new think paradigm that dynamically alternates between analytic and drafting operations. By interleaving textual thoughts with visual thoughts, <em>AD-Loop</em> enables models to iteratively refine both comprehension and outputs, fostering genuine synergy. To train this mechanism, we design a two-stage strategy: supervised learning on interleaved thought data to initialize alternation, followed by reinforcement learning to promote adaptive and autonomous control. Extensive experiments demonstrate that <em>AD-Loop</em> consistently improves performance across standard benchmarks for both understanding and generation, with strong transferability to various UVLMs architectures. Visual analyses further validate the effectiveness of implicit visual thoughts. These results highlight <em>AD-Loop</em> as a principled and broadly applicable strategy for synergizing comprehension and creation.
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-2">Method</h2>
+                <div class="content has-text-justified">
+                    <p  class="content has-text-justified">
+                         Currently, existing explorations of synergy have predominantly focused on improving architectural design to unify the two abilities, while overlooking a crucial point: during task solving, the understanding and generation modules often lack close and explicit interaction, thereby failing to realize genuine synergy between comprehension and generation.
+                    </p>
+                    <div class="content has-text-justified" id="fig1"> 
+                        <img class="columns is-centered has-text-centered" src="./static/images/synergy.png" alt="Teaser" width="85%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                        <figcaption>
+                            <p style="text-align: left;">
+                                <font color="061E61">
+                                    <b>Figure 1: </b> Comparison of existing mechanisms for synergizing understanding and generation, including isolated learning where the two abilities are trained independently, dual learning which    leverages cross-modal reconstruction for mutual supervision, and co-learning which jointly optimizes both tasks with paired samples.
+                                </font>
+                            </p>
+                        </figcaption>
+                    </div>
+
+                    <p  class="content has-text-justified">
+                         To illustrate this, when a user’s instruction is ambiguous, an understanding module could first propose several plausible candidate solutions for a question, then invoke generation to produce sketches or key visualizations as a means of “verifying” these candidates, ultimately yielding the correct answer. Conversely, once the generation module produces initial results, it could query the understanding module for high-level guidance, such as attributes or reasonable spatial layouts, to progressively refine the output (see <a href="#fig2">Figure 2</a>). This motivates a new perspective: instead of treating understanding and generation as co-existing skills, we argue they should be interleaved in a problem-solving loop.
+                    </p>
+                    <div class="content has-text-justified" id="fig2"> 
+                        <img class="columns is-centered has-text-centered" src="./static/images/motivation.png" alt="Teaser" width="85%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                        <figcaption>
+                            <p style="text-align: left;">
+                                <font color="061E61">
+                                    <b>Figure 2: </b> Overall illustration of the multimodal encoding framework.
+                                </font>
+                            </p>
+                        </figcaption>
+                    </div>
+                    <p  class="content has-text-justified">
+                         Building upon a UVLM, we model the synergetic understanding and generation thinking process as an interleaved analyzing–drafting problem-solving loop. Given an input, the model alternates between analyzing (producing textual thoughts) and drafting (producing visual thoughts) before delivering the final output. To achieve this, we design a two-stage training pipeline: Stage 1 performs supervised training to <em>imitate interleaved thinking</em>, and Stage 2 leverages reinforcement learning to enable the model to <em>adaptively decide when to invoke analysis or drafting</em>.
+                    </p>
+                    <div class="content has-text-justified" id="fig3"> 
+                        <img class="columns is-centered has-text-centered" src="./static/images/method.png" alt="Teaser" width="85%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                        <figcaption>
+                            <p style="text-align: left;">
+                                <font color="061E61">
+                                    <b>Figure 3: </b>Illustration of the interleaved analytic–drafting problem-solving loop, where understanding and generation interact synergistically to yield accurate solutions.
+                                </font>
+                            </p>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" style="background-color: rgb(245,245,245);">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-2">Experiments</h2>
+                <div class="content has-text-justified">
+                    <h4 class="title is-4">RQ-1: What do the implicit visual thoughts look like?</h4>
+                    <p  class="content has-text-justified">
+                          As shown in <a href="#fig4">Figure 4</a>, the observations align well with our expectations: latent visual thoughts encode semantically coherent information while preserving coarse pixel-level structures. This allows the model to recover the overall contours of the original image and to unify conceptually similar regions. For example, in case (4), distinct regions depicting watermelons and lemons are consistently represented by the same latent token, reflecting their shared conceptual category.
+                    </p>
+                    <div class="content has-text-justified" id="fig4"> 
+                        <img class="columns is-centered has-text-centered" src="./static/images/code.png" alt="Teaser" width="85%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                        <figcaption>
+                            <p style="text-align: left;">
+                                <font color="061E61">
+                                    <b>Figure 4: </b>Examples of latent visual thoughts. Each case shows the original image (left) and the corresponding visual thoughts (right), capturing abstract visual structures.
+                                </font>
+                            </p>
+                        </figcaption>
+                    </div>
+                    
+
+                    <h4 class="title is-4">RQ-2: When are the visual thoughts needed?</h4>
+                    <p  class="content has-text-justified">
+                          As shown in <a href="#fig5">Figure 5</a>, integrating AD-Loop thoughts improves performance across a wide range of questions, with pronounced gains in spatial and mechanistic reasoning. Fine-grained trends show preferential activation for rotation, complex OCR, and 3D perception, while usage drops for tables, sequences, and symbolic reasoning, where text-only chains suffice. These patterns indicate our adaptive policy that selectively invokes visual thoughts when they offer the greatest benefit.
+                    </p>
+                    <div class="content has-text-justified" id="fig5"> 
+                        <img class="columns is-centered has-text-centered" src="./static/images/visual-thoughts.png" alt="Teaser" width="85%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                        <figcaption>
+                            <p style="text-align: left;">
+                                <font color="061E61">
+                                    <b>Figure 5: </b>Performance across skills and capabilities on the LogicVista dataset, comparing models with and without visual thoughts, alongside the proportion of visual-thought usage.
+                                </font>
+                            </p>
+                        </figcaption>
+                    </div>
+                    
+
+                    <h4 class="title is-4">RQ-3: How does visual thoughts work?</h4>
+                    <p  class="content has-text-justified">
+                          As shown in <a href="#fig6">Figure 6</a>, with the raw prompt alone, the model tends to generate superficial, semantically shallow outputs. Adding self-think produces more detailed descriptions, yet still overly abstract and often misaligned with user intent. By contrast, interleaved thoughts guide faithful, detail-oriented outputs (e.g., correct wheels/screens). Finally, filtering interleaved traces to text-only frequently reintroduces errors (e.g., lighting/positioning), underscoring the necessity of visual thoughts for high-fidelity controllability.
+                    </p>
+                    <div class="content has-text-justified" id="fig6"> 
+                        <img class="columns is-centered has-text-centered" src="./static/images/visual-thoughts-example.png" alt="Teaser" width="85%"
+                                style="display: block; margin:0 auto">
+                        <br>
+                        <figcaption>
+                            <p style="text-align: left;">
+                                <font color="061E61">
+                                    <b>Figure 6: </b>Qualitative comparison: original prompt (left), self-think mode, interleaved thoughts, and text-only thoughts filtered from the interleaved thoughts (right).[V-T] means latent visual thoughts.
+                                </font>
+                            </p>
+                        </figcaption>
+                    </div>
+
+                </div>
+            </div>
+        </div>  
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{wu2026synergizing,
+  title={Synergizing Understanding and Generation with Interleaved Analyzing-Drafting Thinking},
+  author={Shengqiong Wu, Bobo Li, Xinkai Wang, Xiangtai Li, Lei Cui, Furu Wei, Shuicheng Yan, Hao Fei, Tat-Seng Chua},
+  journal={arXiv preprint arXiv:2602.21435},
+  year={2026}
+}
+</code></pre>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p style="text-align: center;">
+                        The webpage is built based on <a href="https://next-gpt.github.io/">NExT-GPT</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
